@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chào Cậu</title>
+    <style>
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      button {
+        padding: 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Em có yêu anh không?</h1>
+    <div id="doo">
+      <div id="yes" class="container">
+        <button type="button" id="yes-btn">Có</button>
+      </div>
+      <br />
+      <div id="no" class="container">
+        <button type="button" id="no-btn">Không</button>
+      </div>
+    </div>
+
+    <script>
+      const no = document.getElementById("no");
+
+      no.addEventListener("mouseover", () => {
+        const x = Math.floor(Math.random() * (window.innerWidth - 150));
+        const y = Math.floor(Math.random() * (window.innerHeight - 150));
+
+        no.style.left = `${x}px`;
+        no.style.top = `${y}px`;
+      });
+    </script>
+  </body>
+</html>
