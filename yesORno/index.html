@@ -23,6 +23,10 @@
         border-radius: 8%;
         background-color: #ff0586;
         color: #fff;
+        height: 40px;
+        width: 70px;
+        cursor: pointer;
+        border: dashed;
       }
 
       button:hover {
@@ -30,23 +34,45 @@
       }
       a {
         text-decoration: none;
+        color: #fff;
+      }
+
+      img {
+        display: block;
+        width: 20%;
+        margin: 0 auto;
+      }
+
+      div#imghe {
+        display: none;
       }
     </style>
   </head>
   <body>
     <h1>Em có yêu anh không?</h1>
-    <div id="doo">
-      <div id="yes" class="container">
-        <button type="button" id="yes-btn"><a href="">Có</a></button>
+
+    <div id="imghe">
+      <div id="buon">
+        <img class="hmm" src="./image/meme-tinh-yeu-yody-vn-4.png" alt="hic" />
       </div>
+    </div>
+    <div id="doo">
+      <a href="./yes.html">
+        <div id="yes" class="container">
+          <button type="button" id="yes-btn">Không</button>
+        </div>
+      </a>
+
       <br />
       <div id="no" class="container">
-        <button type="button" id="no-btn">Không</button>
+        <button type="button" id="no-btn">Có</button>
       </div>
     </div>
 
     <script>
       const no = document.getElementById("no");
+      const yes = document.getElementById("yes");
+      const img = document.getElementById("imghe");
 
       no.addEventListener("mouseover", () => {
         const x = Math.floor(Math.random() * (window.innerWidth - 150));
@@ -54,6 +80,17 @@
 
         no.style.left = `${x}px`;
         no.style.top = `${y}px`;
+      });
+      yes.addEventListener("mouseover", () => {
+        // Xử lý khi hover vào button
+        img.style.display = "block";
+
+        // Thêm các hành động hoặc thay đổi CSS tùy ý
+      });
+
+      yes.addEventListener("mouseout", () => {
+        // Ẩn ảnh khi rời chuột khỏi button
+        img.style.display = "none";
       });
     </script>
   </body>
