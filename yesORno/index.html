@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chào Cậu</title>
     <style>
+      body {
+        background-image: url(./image/tarjeta-dia-san-valentin-corazon.png);
+        background-size: 100%;
+      }
       h1 {
         text-align: center;
-        color: #ff0586;
+        color: #ffcc00;
+        font-size: 60px;
       }
 
       .container {
         position: absolute;
-        top: 50%;
+        top: 65%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
@@ -42,6 +47,10 @@
         width: 20%;
         margin: 0 auto;
       }
+      img.hmm {
+        width: 350px;
+        height: 350px;
+      }
 
       div#imghe {
         display: none;
@@ -49,23 +58,29 @@
     </style>
   </head>
   <body>
-    <h1>Em có yêu anh không?</h1>
+    <div id="container1">
+      <h1>Em có yêu anh không?</h1>
 
-    <div id="imghe">
-      <div id="buon">
-        <img class="hmm" src="./image/meme-tinh-yeu-yody-vn-4.png" alt="hic" />
-      </div>
-    </div>
-    <div id="doo">
-      <a href="./yes.html">
-        <div id="yes" class="container">
-          <button type="button" id="yes-btn">Không</button>
+      <div id="imghe">
+        <div id="buon">
+          <img
+            class="hmm"
+            src="./image/meme-tinh-yeu-yody-vn-4.png"
+            alt="hic"
+          />
         </div>
-      </a>
+      </div>
+      <div id="doo">
+        <a href="./yes.html">
+          <div id="yes" class="container">
+            <button type="button" id="yes-btn">Không</button>
+          </div>
+        </a>
 
-      <br />
-      <div id="no" class="container">
-        <button type="button" id="no-btn">Có</button>
+        <!-- <br /> -->
+        <div id="no" class="container">
+          <button type="button" id="no-btn">Có</button>
+        </div>
       </div>
     </div>
 
